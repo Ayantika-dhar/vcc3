@@ -2,6 +2,10 @@
 
 echo "Creating Falkon desktop shortcut..."
 
+# Ensure necessary directories exist
+mkdir -p ~/.local/share/applications
+mkdir -p ~/Desktop
+
 # Define the shortcut file path
 SHORTCUT_PATH="$HOME/.local/share/applications/falkon.desktop"
 
@@ -27,5 +31,5 @@ echo "Shortcut created in Applications menu."
 cp $SHORTCUT_PATH $HOME/Desktop/falkon.desktop
 chmod +x $HOME/Desktop/falkon.desktop
 
-echo "Falkon shortcut created on Desktop!"
+echo "Falkon shortcut successfully created on Desktop!"
 echo "If the icon doesn't appear, right-click on it and select 'Allow launching'."
