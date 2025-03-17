@@ -184,3 +184,8 @@ cd ~/cpu-monitoring-app
 echo "✔ Full-Stack App setup complete!"
 echo "📢 Start Backend: 'node server.js'"
 echo "📢 Start Frontend: 'cd frontend && npm start'"
+
+# GCP Authentication
+echo "Authenticating with GCP..."
+gcloud auth login
+gcloud config set project vcc-ass3
