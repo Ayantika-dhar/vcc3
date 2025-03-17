@@ -72,7 +72,7 @@ function createGCPVM(callback) {
 function transferFilesToGCP(callback) {
     console.log("Transferring files using SCP...");
 
-    exec(`gcloud compute scp --recurse ${LOCAL_PATH} ${GCP_VM_NAME}:${GCP_INSTANCE_PATH} --zone=${GCP_ZONE}`, 
+    exec(`gcloud compute scp -r . ${GCP_VM_NAME}:~/cpu-monitoring-app --zone=${GCP_ZONE}`, 
         (error, stdout, stderr) => {
             if (error) {
                 console.error(`SCP Error: ${error.message}`);
