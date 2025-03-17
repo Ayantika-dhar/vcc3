@@ -1,0 +1,4 @@
+curl http://localhost:5000/cpu-usage  # Check CPU usage
+curl -X POST http://localhost:5000/start-computation  # Start CPU load
+curl -X POST http://localhost:5000/stop-computation  # Stop CPU load
+curl http://localhost:5000/gcp-status  # Check GCP status
